@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Website Pribadi - Nama Anda</title>
+        <style>
+            /* Global Styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Arial", sans-serif;
+            }
+            body {
+                background-color: #f3f4f6; /* Warna latar belakang soft grey */
+                color: #333;
+                line-height: 1.6;
+                overflow-x: hidden;
+                font-size: 16px;
+            }
+
+            /* Hero Section */
+            .hero {
+                height: 100vh;
+                background: linear-gradient(
+                    to bottom,
+                    #b3d9ff,
+                    #a8c8d8
+                ); /* Gradasi warna biru muda dan abu-abu lembut */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                animation: fadeIn 1.5s ease-out;
+            }
+            .hero h1 {
+                font-size: 3.5rem;
+                font-weight: bold;
+                color: #2e3a59; /* Warna biru gelap */
+                letter-spacing: 3px;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                animation: slideIn 1s ease-out;
+            }
+            .hero p {
+                font-size: 1.2rem;
+                color: #5d6a78; /* Warna abu-abu lembut */
+                margin-bottom: 20px;
+                opacity: 0.8;
+                animation: fadeInText 1.5s ease-out;
+            }
+            .hero a {
+                padding: 12px 25px;
+                background-color: #8da9d7; /* Biru pastel yang lembut */
+                color: white;
+                font-size: 1.1rem;
+                text-decoration: none;
+                border-radius: 50px;
+                transition: all 0.3s ease-in-out;
+                animation: bounceIn 1s ease-out;
+            }
+            .hero a:hover {
+                background-color: #6c87a1; /* Biru lebih gelap saat hover */
+                transform: scale(1.05);
+            }
+
+            /* About Section */
+            .about {
+                padding: 80px 20px;
+                text-align: center;
+                background-color: #ffffff; /* Putih bersih */
+                animation: fadeIn 2s ease-out;
+            }
+            .about h2 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                color: #4e5b6e; /* Biru abu-abu lebih gelap */
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .about p {
+                font-size: 1.1rem;
+                max-width: 800px;
+                margin: 0 auto;
+                color: #5d6a78;
+                line-height: 1.8;
+            }
+            .about img {
+                margin-top: 30px;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                border: 5px solid #8da9d7;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+            .about img:hover {
+                transform: scale(1.1);
+                box-shadow: 0 12px 50px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Skills Section */
+            .skills {
+                padding: 80px 20px;
+                background-color: #f9fafc; /* Latar belakang putih kebiruan */
+                text-align: center;
+                animation: fadeInUp 2s ease-out;
+            }
+            .skills h2 {
+                font-size: 2.5rem;
+                color: #4e5b6e;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+            }
+            .skills ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                animation: fadeInUp 1.5s ease-out;
+            }
+            .skills li {
+                background-color: #ffffff;
+                padding: 20px;
+                margin: 15px;
+                border-radius: 10px;
+                width: 200px;
+                font-size: 1.1rem;
+                color: #5d6a78;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+            .skills li:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            }
+
+            /* Contact Section */
+            .contact {
+                padding: 80px 20px;
+                text-align: center;
+                background-color: #ffffff;
+            }
+            .contact h2 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                color: #4e5b6e;
+                text-transform: uppercase;
+            }
+            .contact a {
+                padding: 15px 35px;
+                background-color: #8da9d7;
+                color: white;
+                font-size: 1.1rem;
+                text-decoration: none;
+                border-radius: 50px;
+                transition: all 0.3s ease-in-out;
+            }
+            .contact a:hover {
+                background-color: #6c87a1;
+                transform: scale(1.05);
+            }
+
+            /* Footer */
+            footer {
+                background-color: #ffffff;
+                color: #5d6a78;
+                padding: 20px;
+                text-align: center;
+                font-size: 0.9rem;
+            }
+
+            /* Animations */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes fadeInText {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes slideIn {
+                from {
+                    transform: translateY(-50px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            @keyframes bounceIn {
+                0% {
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                60% {
+                    transform: scale(1.1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .hero h1 {
+                    font-size: 2rem;
+                }
+                .hero p {
+                    font-size: 1rem;
+                }
+                .about img {
+                    width: 150px;
+                    height: 150px;
+                }
+                .skills li {
+                    width: 150px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div>
+                <h1>WEBSITE ADIT</h1>
+                <p>
+                    Desainer Web, Pengembang Kreatif, dan Visualisator Digital
+                </p>
+                <a href="#contact">Hubungi Saya</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <h2>Tentang Saya</h2>
+            <p>
+                Hai! Saya Aditya putra mahesa, seorang desainer web yang
+                mencintai teknologi dan estetika. Saya berfokus pada pembuatan
+                pengalaman pengguna yang luar biasa dan desain visual yang
+                kreatif. Saya suka berkolaborasi dan selalu berusaha untuk
+                belajar hal-hal baru dalam dunia desain dan pengembangan web.
+            </p>
+            <img src="https://via.placeholder.com/200" alt="Foto Profil" />
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Keterampilan Saya</h2>
+            <ul>
+                <li>Desain UI/UX</li>
+                <li>Web Development</li>
+                <li>Desain Grafis (Adobe Suite)</li>
+                <li>Pengembangan Aplikasi</li>
+                <li>Fotografi & Videografi</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2>Hubungi Saya</h2>
+            <!-- Tombol Kirim Email yang Menggunakan mailto: -->
+            <a
+                href="mailto:mashditx@gmail.com?subject=Pertanyaan dari Website&body=Halo, saya ingin bertanya tentang..."
+                >Kirim Email</a
+            >
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Nama Anda. Semua hak dilindungi.</p>
+        </footer>
+    </body>
+</html>
